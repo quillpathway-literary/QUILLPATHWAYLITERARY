@@ -1,0 +1,1648 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUILL PATHWAY LITERARY | A Strategic Pathway from Books to Readers</title>
+    <meta name="description" content="QUILL PATHWAY LITERARY provides expert author marketing, reader discovery, and strategic publishing services to connect your books with the right audience.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #002150;
+            --deep-navy: #061B42;
+            --primary-gold: #C17B0A;
+            --bright-gold: #E39F21;
+            --warm-ivory: #FCFAF6;
+            --white: #FFFFFF;
+            --soft-grey: #F3F4F6;
+            --gold-gradient: linear-gradient(135deg, #C17B0A 0%, #E39F21 50%, #C17B0A 100%);
+            --navy-gradient: linear-gradient(135deg, #002150 0%, #061B42 100%);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            background-color: var(--warm-ivory);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6, .serif {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-navy);
+            line-height: 1.2;
+        }
+
+        /* UTILITIES */
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 80px 0; }
+        .bg-navy { background-color: var(--primary-navy); color: var(--white); }
+        .bg-navy h2, .bg-navy h3 { color: var(--white); }
+        .bg-grey { background-color: var(--soft-grey); }
+        .text-center { text-align: center; }
+        .gold-text { color: var(--bright-gold); }
+        .mb-2 { margin-bottom: 20px; }
+        .mb-4 { margin-bottom: 40px; }
+        .pointer-none { pointer-events: none; }
+
+        /* DECORATIONS */
+        .gold-line {
+            height: 3px;
+            width: 80px;
+            background: var(--gold-gradient);
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+        .gold-line-left {
+            height: 3px;
+            width: 80px;
+            background: var(--gold-gradient);
+            margin: 20px 0;
+            border-radius: 2px;
+        }
+        .section-tag {
+            display: inline-block;
+            background: rgba(193, 123, 10, 0.1);
+            color: var(--primary-gold);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            border: 1px solid rgba(193, 123, 10, 0.3);
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            z-index: 10;
+        }
+        .btn-gold {
+            background: var(--gold-gradient);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(193, 123, 10, 0.3);
+        }
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(193, 123, 10, 0.4);
+            color: var(--white);
+        }
+        .btn-navy {
+            background: var(--primary-navy);
+            color: var(--white);
+            border: 1px solid var(--primary-navy);
+        }
+        .btn-navy:hover {
+            background: var(--deep-navy);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-gold);
+            border: 2px solid var(--primary-gold);
+        }
+        .btn-outline:hover {
+            background: var(--primary-gold);
+            color: var(--white);
+        }
+
+        /* HEADER & NAV */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        .top-bar {
+            background: var(--deep-navy);
+            color: var(--white);
+            font-size: 0.85rem;
+            padding: 8px 0;
+        }
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar a { color: var(--bright-gold); text-decoration: none; font-weight: 500;}
+        .top-bar a:hover { text-decoration: underline; }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo img {
+            height: 55px;
+            width: auto;
+            object-fit: contain;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-navy);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gold);
+            transition: var(--transition);
+        }
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary-gold); }
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--primary-navy);
+            cursor: pointer;
+            border: none;
+            background: transparent;
+        }
+
+        /* PAGE ROUTING */
+        .page-section {
+            display: none;
+            min-height: calc(100vh - 300px);
+            padding-top: 130px;
+            animation: fadeIn 0.4s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+        .page-section.active { display: block; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* PAGE HEADER BANNER */
+        .page-banner {
+            background: var(--navy-gradient);
+            color: var(--white);
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: -30px;
+            margin-bottom: 40px;
+        }
+        .page-banner::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at right, rgba(193,123,10,0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .page-banner h1 { color: var(--white); font-size: 3rem; margin-bottom: 15px; position: relative; z-index: 2; }
+        .page-banner p { font-size: 1.2rem; color: var(--bright-gold); max-width: 700px; margin: 0 auto; position: relative; z-index: 2;}
+
+        /* HERO SECTION & HOME LOGO */
+        .hero {
+            padding: 160px 0 100px;
+            background: var(--navy-gradient);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 50%; height: 100%;
+            background: radial-gradient(circle at center, rgba(193,123,10,0.15) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        .hero h1 span { color: var(--bright-gold); }
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            max-width: 90%;
+        }
+        .hero-logo-container {
+            background: var(--white);
+            border: 2px solid var(--primary-gold);
+            border-radius: 12px;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            position: relative;
+        }
+        .hero-logo-container::before {
+            content: '';
+            position: absolute;
+            top: -12px; left: -12px; right: 12px; bottom: 12px;
+            border: 2px solid rgba(193, 123, 10, 0.4);
+            border-radius: 12px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* GRID LAYOUTS */
+        .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+        /* SERVICE CARDS (HOME) */
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+            position: relative;
+            z-index: 2;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: var(--primary-gold);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        .service-card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+        .service-icon {
+            width: 60px; height: 60px;
+            background: var(--gold-gradient);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--white); font-size: 24px; font-weight: bold;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(193, 123, 10, 0.3);
+        }
+
+        /* DETAILED SERVICES PAGE (01-11) */
+        .detailed-service {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            border-left: 5px solid var(--primary-gold);
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            position: relative;
+        }
+        .service-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            opacity: 0.8;
+            min-width: 100px;
+        }
+        .service-content h3 { font-size: 2rem; margin-bottom: 20px; }
+        .service-content p { font-size: 1.1rem; color: #555; margin-bottom: 15px; }
+
+        /* AUTHORS GALLERY (HORIZONTAL NATIVE SCROLL) */
+        .authors-scroll-container {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 20px 10px 40px;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-gold) var(--soft-grey);
+            -webkit-overflow-scrolling: touch;
+        }
+        .authors-scroll-container::-webkit-scrollbar {
+            height: 10px;
+        }
+        .authors-scroll-container::-webkit-scrollbar-track {
+            background: var(--soft-grey);
+            border-radius: 5px;
+        }
+        .authors-scroll-container::-webkit-scrollbar-thumb {
+            background-color: var(--primary-gold);
+            border-radius: 5px;
+        }
+        .author-card {
+            min-width: 340px;
+            max-width: 340px;
+            background: var(--white);
+            border: 1px solid rgba(193, 123, 10, 0.2);
+            border-radius: 12px;
+            padding: 30px 20px;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            white-space: normal;
+        }
+        .author-photo-wrapper {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            padding: 4px;
+            background: var(--gold-gradient);
+            margin-bottom: 20px;
+        }
+        .author-photo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--white);
+        }
+        .author-info {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            width: 100%;
+        }
+        .author-name {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--primary-navy);
+        }
+        .author-desc {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+        .author-book-section {
+            border-top: 1px solid var(--soft-grey);
+            padding-top: 25px;
+            width: 100%;
+        }
+        .author-book-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 10;
+            pointer-events: auto;
+        }
+        .author-book-link:hover {
+            transform: translateY(-5px);
+        }
+        .author-book-cover {
+            width: auto;
+            height: 160px;
+            object-fit: contain;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            margin-bottom: 15px;
+            border-radius: 2px;
+        }
+        .amazon-btn {
+            background: transparent;
+            color: var(--primary-gold);
+            border: 1px solid var(--primary-gold);
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .author-book-link:hover .amazon-btn {
+            background: var(--primary-gold);
+            color: var(--white);
+        }
+
+        /* WORK PROOF & VIDEO GALLERY */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            background: var(--white);
+            cursor: pointer;
+        }
+        .gallery-item img, .gallery-item video {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-item .overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,33,80,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            font-size: 1.2rem;
+            opacity: 0;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        /* LIGHTBOX */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox.show {
+            display: flex;
+            opacity: 1;
+        }
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90vh;
+            border: 2px solid var(--primary-gold);
+            border-radius: 4px;
+            box-shadow: 0 0 20px rgba(193, 123, 10, 0.5);
+            object-fit: contain;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: var(--white);
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .lightbox-close:hover {
+            color: var(--bright-gold);
+        }
+
+        /* CONTACT FORM */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+        .contact-info-block {
+            padding: 30px;
+            background: var(--navy-gradient);
+            color: var(--white);
+            border-radius: 8px;
+        }
+        .contact-info-block h3 { color: var(--bright-gold); margin-bottom: 20px; }
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .contact-info-item p { margin: 0; }
+        .contact-info-item a { color: var(--white); text-decoration: none; }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--primary-navy); }
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--primary-gold); box-shadow: 0 0 0 3px rgba(193, 123, 10, 0.1); }
+        textarea.form-control { height: 150px; resize: vertical; }
+        
+        .form-message { display: none; padding: 15px; border-radius: 4px; margin-top: 20px; font-weight: 500; }
+        .form-message.success { display: block; background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .form-message.error { display: block; background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        
+        .loading-spinner {
+            display: none;
+            width: 20px; height: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: var(--white);
+            animation: spin 1s ease-in-out infinite;
+            margin-left: 10px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* LEGAL PAGES */
+        .legal-content {
+            background: var(--white);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .legal-content h2 { margin-top: 40px; margin-bottom: 15px; color: var(--primary-navy); }
+        .legal-content h2:first-child { margin-top: 0; }
+        .legal-content p, .legal-content ul { margin-bottom: 20px; color: #444; }
+        .legal-content ul { padding-left: 20px; }
+        .legal-content li { margin-bottom: 10px; }
+
+        /* FOOTER */
+        footer {
+            background: var(--deep-navy);
+            color: var(--white);
+            padding: 80px 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        .footer-logo img { height: 60px; margin-bottom: 20px; background: var(--white); padding: 5px; border-radius: 4px; }
+        .footer-about { color: #ccc; margin-bottom: 20px; font-size: 0.95rem; }
+        .footer-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--bright-gold);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .footer-heading::after {
+            content: ''; position: absolute; left: 0; bottom: 0;
+            width: 30px; height: 2px; background: var(--primary-gold);
+        }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+        }
+        .footer-links a:hover { color: var(--bright-gold); transform: translateX(5px); }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        .legal-links a {
+            color: var(--bright-gold);
+            font-weight: 600;
+            text-decoration: none;
+            margin-left: 20px;
+            position: relative;
+        }
+        .legal-links a:hover { text-decoration: underline; color: var(--white); }
+
+        /* BACK TO TOP */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            background: var(--gold-gradient);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(193, 123, 10, 0.4);
+        }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { transform: translateY(-5px); }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .hero .container { grid-template-columns: 1fr; text-align: center; }
+            .hero::after { width: 100%; height: 50%; }
+            .hero-logo-container { margin: 0 auto; max-width: 500px; }
+            .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+            .detailed-service { flex-direction: column; gap: 20px; padding: 30px; }
+            .contact-container { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px; left: 0; right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+                transform: translateY(-150%);
+                transition: var(--transition);
+                opacity: 0;
+            }
+            .nav-links.active { transform: translateY(0); opacity: 1; }
+            .mobile-toggle { display: block; }
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
+            .legal-links a { margin: 0 10px; }
+            .top-bar { display: none; }
+            .mobile-social-links { display: flex !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div><a href="mailto:hello@quillpathwayliterary.com">hello@quillpathwayliterary.com</a></div>
+                <div style="display: flex; gap: 15px;">
+                    <a href="https://www.facebook.com/profile.php?id=100086261552549" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://www.tiktok.com/@quillpathway_literary" target="_blank" rel="noopener noreferrer">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <nav class="nav-container">
+            <a href="#home" class="logo">
+                <img src="yhhh.png" alt="QUILL PATHWAY LITERARY Logo">
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li><a href="#services" class="nav-item">Services</a></li>
+                <li><a href="#authors" class="nav-item">Authors</a></li>
+                <li><a href="#publishing" class="nav-item">Publishing</a></li>
+                <li><a href="#faq" class="nav-item">FAQ</a></li>
+                <li><a href="#contact" class="btn btn-gold" style="color:white; padding: 10px 20px; border-radius: 4px; border:none; margin-left:10px;">Get Started</a></li>
+                
+                <!-- Social links exclusively for mobile menu view -->
+                <li class="mobile-social-links" style="display: none; gap: 15px; justify-content: center; margin-top: 15px; width: 100%;">
+                    <a href="https://www.facebook.com/profile.php?id=100086261552549" target="_blank" rel="noopener noreferrer" style="color:var(--bright-gold); border:1px solid var(--bright-gold); padding:5px 15px; border-radius:4px;">Facebook</a>
+                    <a href="https://www.tiktok.com/@quillpathway_literary" target="_blank" rel="noopener noreferrer" style="color:var(--bright-gold); border:1px solid var(--bright-gold); padding:5px 15px; border-radius:4px;">TikTok</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        
+        <!-- HOME PAGE -->
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <span class="section-tag">Author Marketing & Reader Discovery</span>
+                        <h1>A Strategic Pathway from <span>Books to Readers.</span></h1>
+                        <p>QUILL PATHWAY LITERARY bridges the gap between authors and their ideal audience. We craft bespoke marketing strategies, navigate publishing landscapes, and secure the visibility your book deserves.</p>
+                        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                            <a href="#services" class="btn btn-gold">Explore Services</a>
+                            <a href="#contact" class="btn btn-outline" style="color:var(--white); border-color:var(--white);">Connect With Us</a>
+                        </div>
+                    </div>
+                    <div class="hero-logo-container">
+                        <img src="yhhh.png" alt="QUILL PATHWAY LITERARY Prominent Logo" style="width:100%; max-width:350px; height:auto; object-fit:contain; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-padding bg-white">
+                <div class="container">
+                    <div class="text-center mb-4">
+                        <span class="section-tag">What We Do</span>
+                        <h2>Comprehensive Literary Strategies</h2>
+                        <div class="gold-line"></div>
+                    </div>
+                    <div class="grid-3">
+                        <div class="service-card">
+                            <div class="service-icon">01</div>
+                            <h3>Reader Discovery</h3>
+                            <p>We utilize targeted digital campaigns and data-driven insights to position your book directly in front of readers actively searching for your genre.</p>
+                            <a href="#reader-discovery" class="gold-text" style="text-decoration:none; font-weight:600; margin-top:15px; display:inline-block;">Learn More &rarr;</a>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">02</div>
+                            <h3>Strategic Publishing</h3>
+                            <p>From manuscript refinement to global distribution, we guide authors through both traditional and dynamic modern publishing pathways.</p>
+                            <a href="#publishing" class="gold-text" style="text-decoration:none; font-weight:600; margin-top:15px; display:inline-block;">Learn More &rarr;</a>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">03</div>
+                            <h3>Author Branding</h3>
+                            <p>Build a lasting author platform. We develop your professional presence, ensuring your brand resonates powerfully and consistently worldwide.</p>
+                            <a href="#services" class="gold-text" style="text-decoration:none; font-weight:600; margin-top:15px; display:inline-block;">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-padding bg-grey">
+                <div class="container">
+                    <div class="grid-2 align-items-center">
+                        <div>
+                            <span class="section-tag">The Quill Pathway Advantage</span>
+                            <h2>Navigating the Modern Literary Landscape</h2>
+                            <div class="gold-line-left"></div>
+                            <p class="mb-2">At QUILL PATHWAY LITERARY, we understand that writing the book is only half the journey. The true challenge lies in standing out in a crowded marketplace.</p>
+                            <p class="mb-4">Our dedicated team combines industry experience with cutting-edge marketing techniques to elevate your narrative. We do not rely on hope; we rely on strategy, metrics, and relentless execution to build your readership.</p>
+                            <a href="#about" class="btn btn-navy">Discover Our Story</a>
+                        </div>
+                        <div style="position:relative;">
+                            <div style="background:var(--gold-gradient); width:100%; height:100%; position:absolute; top:20px; right:-20px; border-radius:8px; z-index:0; pointer-events:none;"></div>
+                            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='400'%3E%3Crect width='100%25' height='100%25' fill='%23061B42'/%3E%3Ctext x='50%25' y='50%25' fill='%23C17B0A' font-family='Arial' font-size='20' text-anchor='middle'%3EStrategic Excellence%3C/text%3E%3C/svg%3E" alt="Literary Marketing Team" style="width:100%; height:auto; position:relative; z-index:1; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.1);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT PAGE -->
+        <section id="about" class="page-section">
+            <div class="page-banner">
+                <div class="container">
+                    <h1>About QUILL PATHWAY LITERARY</h1>
+                    <p>Building the bridge between exceptional writing and eager readers.</p>
+                </div>
+            </div>
+            <div class="container section-padding pt-0">
+                <div class="grid-2">
+                    <div>
+                        <h2>Our Mission & Vision</h2>
+                        <div class="gold-line-left"></div>
+                        <p class="mb-2">QUILL PATHWAY LITERARY was founded on a singular principle: great books deserve to be read. In an era where thousands of titles are published daily, quality alone is not enough to guarantee visibility. It requires a pathway.</p>
+                        <p class="mb-2">Our mission is to empower authors by providing elite marketing, discovery, and publishing services that cut through the noise. We treat your literary career as a serious business enterprise, applying rigorous marketing standards to artistic works.</p>
+                        <p>We envision a literary world where authors are not left to navigate the complexities of book promotion alone, but are supported by a strategic partner committed to their long-term growth.</p>
+                    </div>
+                    <div class="bg-navy" style="padding:40px; border-radius:8px; position:relative;">
+                        <div style="position:absolute; top:0; right:0; width:100px; height:100px; background:var(--gold-gradient); opacity:0.1; border-radius:0 8px 0 100%;"></div>
+                        <h3 class="mb-2">Our Core Values</h3>
+                        <ul style="list-style:none;">
+                            <li class="mb-2" style="display:flex; gap:15px;"><span class="gold-text">✦</span> <strong>Strategic Precision:</strong> Every campaign is built on data and targeted market analysis.</li>
+                            <li class="mb-2" style="display:flex; gap:15px;"><span class="gold-text">✦</span> <strong>Unwavering Professionalism:</strong> We uphold the highest standards of industry excellence.</li>
+                            <li class="mb-2" style="display:flex; gap:15px;"><span class="gold-text">✦</span> <strong>Author Empowerment:</strong> We demystify the marketing process, keeping you informed and in control.</li>
+                            <li class="mb-2" style="display:flex; gap:15px;"><span class="gold-text">✦</span> <strong>Adaptability:</strong> As the publishing landscape shifts, our strategies evolve to keep you ahead.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES PAGE (11 DETAILED SECTIONS) -->
+        <section id="services" class="page-section">
+            <div class="page-banner">
+                <div class="container">
+                    <h1>Our Elite Services</h1>
+                    <p>A comprehensive suite of marketing and publishing solutions tailored for professional authors.</p>
+                </div>
+            </div>
+            <div class="container section-padding pt-0">
+                
+                <div class="detailed-service">
+                    <div class="service-number">01</div>
+                    <div class="service-content">
+                        <h3>Targeted Reader Discovery Campaigns</h3>
+                        <p>We design hyper-focused digital campaigns aimed directly at your ideal demographic. By analyzing reading habits and genre trends, we place your book in front of audiences actively seeking new titles in your niche.</p>
+                        <p>Our methodology includes specialized search engine marketing, contextual placements, and targeted display advertising to maximize initial visibility.</p>
+                    </div>
+                </div>
+
+                <div class="detailed-service">
+                    <div class="service-number">02</div>
+                    <div class="service-content">
+                        <h3>Author Platform Development</h3>
+                        <p>A book is a product, but the author is the brand. We build and refine your professional digital infrastructure, including premium author website conceptualization, newsletter setup, and brand messaging.</p>
+                        <p>We ensure that when readers discover your book, they are greeted by a professional, trustworthy author presence that encourages long-term loyalty.</p>
+                    </div>
+                </div>
+
+                <div class="detailed-service">
+                    <div class="service-number">03</div>
+                    <div class="service-content">
+                        <h3>Retail Visibility & Optimization</h3>
+                        <p>Being available for sale is different from being visible. We optimize your retail presence across major digital storefronts, focusing on metadata refinement, keyword integration, and compelling book descriptions.</p>
+                        <p>Our optimization ensures algorithms accurately categorize and suggest your book to relevant buyers.</p>
+                    </div>
+                </div>
+
+                <div class="detailed-service">
+                    <div class="service-number">04</div>
+                    <div class="service-content">
+                        <h3>Editorial Consultation</h3>
+                        <p>Before marketing begins, the product must be impeccable. We offer high-level editorial assessments to ensure your manuscript meets rigorous industry standards.</p>
+                        <p>From developmental feedback to pacing analysis, we help polish your narrative to captivate readers from the first page.</p>
+                    </div>
+                </div>
+
+                <div class="detailed-service">
+                    <div class="service-number">05</div>
+                    <div class="service-content">
+                        <h3>Global Distribution Strategy</h3>
+                        <p>We navigate the complexities of international book distribution. Whether physical print-on-demand networks or widespread digital cataloging, we formulate strategies to make your book accessible worldwide.</p>
+                        <p>Our focus includes reaching library systems, independent bookstores, and major global retailers.</p>
+                    </div>
+                </div>
+
+                <div class="detailed-service">
+                    <div class="service-number">06</div>
+                    <div class="service-content">
+                        <h3>Literary Media Outreach</h3>
+                        <p>Securing professional coverage elevates an author's credibility. We construct targeted media kits and conduct outreach to relevant literary bloggers, podcasters, and digital publication editors.</p>
+                        <p>Our approach is curated, focusing on media outlets that align perfectly with your book's themes and audience.</p>
+                    </div>
+                </div>
+
+                <div class="detailed-service">
+                    <div class="service-number">07</div>
+                    <div class="service-content">
+                        <h3>Strategic Release Management</h3>
+                        <p>A successful book launch requires meticulous planning. We develop comprehensive pre-launch, launch, and post-launch timelines to sustain momentum.</p>
+                        <p>This includes coordinating cover reveals, managing advance reader copy distributions, and synchronizing promotional efforts for maximum impact.</p>
+                    </div>
+                </div>
+
+                <div class="detailed-service">
+                    <div class="service-number">08</div>
+                    <div class="service-content">
+                        <h3>Social Media Direction</h3>
+                        <p>Rather than chaotic daily posting, we provide strategic direction for your social presence. We identify which platforms best serve your genre and audience.</p>
+                        <p>We supply content frameworks and engagement strategies that build community without draining your writing time.</p>
+                    </div>
+                </div>
+
+                <div class="detailed-service">
+                    <div class="service-number">09</div>
+                    <div class="service-content">
+                        <h3>Backlist Rejuvenation</h3>
+                        <p>For established authors, previous titles are untapped revenue streams. We create campaigns specifically designed to breathe new life into your backlist.</p>
+                        <p>By updating metadata, running series-based promotions, and linking new releases to past works, we maximize your entire portfolio.</p>
+                    </div>
+                </div>
+
+                <div class="detailed-service">
+                    <div class="service-number">10</div>
+                    <div class="service-content">
+                        <h3>Market Positioning Analysis</h3>
+                        <p>Understanding where your book fits in the current market is crucial. We conduct comparative title analysis to determine the optimal pricing, categorization, and marketing angles for your work.</p>
+                        <p>This data-driven approach prevents misalignment and ensures your book competes effectively in its specific lane.</p>
+                    </div>
+                </div>
+
+                <div class="detailed-service">
+                    <div class="service-number">11</div>
+                    <div class="service-content">
+                        <h3>Continuous Campaign Analytics</h3>
+                        <p>Marketing without measurement is merely guessing. We provide ongoing analysis of campaign performance, tracking visibility metrics, engagement rates, and conversion indicators.</p>
+                        <p>We continuously refine our strategies based on hard data, ensuring resources are allocated efficiently for optimal results.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- READER DISCOVERY PAGE -->
+        <section id="reader-discovery" class="page-section">
+            <div class="page-banner">
+                <div class="container">
+                    <h1>Reader Discovery</h1>
+                    <p>Connecting your narrative with the exact audience searching for it.</p>
+                </div>
+            </div>
+            <div class="container section-padding pt-0">
+                <div class="grid-2 align-items-center mb-4">
+                    <div>
+                        <h2>The Science of Visibility</h2>
+                        <div class="gold-line-left"></div>
+                        <p class="mb-2">Reader Discovery is the cornerstone of QUILL PATHWAY LITERARY. In a saturated market, waiting to be found is not a viable strategy. We proactively seek out your readership.</p>
+                        <p>By mapping reader behavior, analyzing search trends, and understanding genre expectations, we build a bridge directly to your ideal demographic. Our discovery protocols ensure that your book appears exactly when and where potential readers are making purchasing decisions.</p>
+                    </div>
+                    <div>
+                        <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='300'%3E%3Crect width='100%25' height='100%25' fill='%23002150'/%3E%3Ctext x='50%25' y='50%25' fill='%23E39F21' font-family='Arial' font-size='20' text-anchor='middle'%3EAudience Analytics%3C/text%3E%3C/svg%3E" alt="Reader Analytics" style="width:100%; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PUBLISHING PAGE -->
+        <section id="publishing" class="page-section">
+            <div class="page-banner">
+                <div class="container">
+                    <h1>Strategic Publishing</h1>
+                    <p>Navigating the complex avenues of bringing a book to market.</p>
+                </div>
+            </div>
+            <div class="container section-padding pt-0">
+                <div class="text-center mb-4">
+                    <h2>A Defined Path to Publication</h2>
+                    <div class="gold-line"></div>
+                    <p style="max-width:800px; margin:0 auto;">Whether you are establishing an independent imprint or seeking hybrid solutions, QUILL PATHWAY LITERARY provides the infrastructure and strategic guidance necessary for a flawless release.</p>
+                </div>
+                <div class="grid-3">
+                    <div class="service-card text-center">
+                        <div class="service-icon" style="margin: 0 auto 20px;">P</div>
+                        <h3>Production Standards</h3>
+                        <p>We advise on industry-standard formatting, layout, and cover design principles to ensure your book stands shoulder-to-shoulder with top-tier publications.</p>
+                    </div>
+                    <div class="service-card text-center">
+                        <div class="service-icon" style="margin: 0 auto 20px;">D</div>
+                        <h3>Distribution Logistics</h3>
+                        <p>Guidance on selecting the right distribution channels to maximize reach across print, digital, and audio formats globally.</p>
+                    </div>
+                    <div class="service-card text-center">
+                        <div class="service-icon" style="margin: 0 auto 20px;">R</div>
+                        <h3>Rights Management</h3>
+                        <p>Strategic counsel on maintaining control of your intellectual property while maximizing its revenue potential across various mediums.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW WE WORK PAGE -->
+        <section id="how-we-work" class="page-section">
+            <div class="page-banner">
+                <div class="container">
+                    <h1>How We Work</h1>
+                    <p>Our collaborative and transparent operational process.</p>
+                </div>
+            </div>
+            <div class="container section-padding pt-0">
+                <div class="grid-4">
+                    <div class="text-center">
+                        <h2 style="font-size:3rem; color:var(--primary-gold); margin-bottom:10px;">01</h2>
+                        <h3>Assessment</h3>
+                        <p>We review your manuscript, current platform, and goals to determine the optimal strategic pathway.</p>
+                    </div>
+                    <div class="text-center">
+                        <h2 style="font-size:3rem; color:var(--primary-gold); margin-bottom:10px;">02</h2>
+                        <h3>Strategy</h3>
+                        <p>Our team develops a bespoke campaign architecture tailored specifically to your genre and target audience.</p>
+                    </div>
+                    <div class="text-center">
+                        <h2 style="font-size:3rem; color:var(--primary-gold); margin-bottom:10px;">03</h2>
+                        <h3>Execution</h3>
+                        <p>We implement the strategy with precision, utilizing targeted digital assets and marketing protocols.</p>
+                    </div>
+                    <div class="text-center">
+                        <h2 style="font-size:3rem; color:var(--primary-gold); margin-bottom:10px;">04</h2>
+                        <h3>Optimization</h3>
+                        <p>Continuous monitoring and refinement of campaigns based on data analytics to ensure sustained momentum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AUTHORS PAGE (HORIZONTAL SCROLL) -->
+        <section id="authors" class="page-section">
+            <div class="page-banner">
+                <div class="container">
+                    <h1>Featured Authors</h1>
+                    <p>Discover the distinguished voices currently utilizing the Quill Pathway.</p>
+                </div>
+            </div>
+            <div class="container section-padding pt-0">
+                <div class="text-center mb-4">
+                    <h2>Voices We Amplify</h2>
+                    <div class="gold-line"></div>
+                    <p>Scroll horizontally to view our featured authors.</p>
+                </div>
+                
+                <!-- Native Horizontal Scroll Container -->
+                <div class="authors-scroll-container">
+                    
+                    <!-- Rachael Duncan -->
+                    <div class="author-card">
+                        <div class="author-photo-wrapper">
+                            <img src="Duncan photo.webp" alt="Duncan photo.webp" class="author-photo">
+                        </div>
+                        <div class="author-info">
+                            <h3 class="author-name">Rachael Duncan</h3>
+                            <p class="author-desc">Rachael crafts compelling narratives that explore the intricate dynamics of human relationships and suspense. Her methodical approach to storytelling keeps readers engaged from the very first chapter.</p>
+                            <div class="author-book-section">
+                                <a href="https://www.amazon.com/s?k=Rachael+Duncan+books" class="author-book-link" target="_blank" rel="noopener noreferrer">
+                                    <img src="Duncan book.jpg" alt="Book by Rachael Duncan" class="author-book-cover">
+                                    <span class="amazon-btn">View on Amazon</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lisa Jewell -->
+                    <div class="author-card">
+                        <div class="author-photo-wrapper">
+                            <img src="jewell1.jpg" alt="Lisa Jewell" class="author-photo">
+                        </div>
+                        <div class="author-info">
+                            <h3 class="author-name">Lisa Jewell</h3>
+                            <p class="author-desc">Known for her gripping psychological thrillers, Lisa masterfully weaves dark secrets and unexpected twists into everyday settings, creating atmospheric tales that resonate deeply with thriller enthusiasts.</p>
+                            <div class="author-book-section">
+                                <a href="https://www.amazon.com/s?k=Lisa+Jewell+books" class="author-book-link" target="_blank" rel="noopener noreferrer">
+                                    <img src="jewell%20book.webp" alt="Book by Lisa Jewell" class="author-book-cover">
+                                    <span class="amazon-btn">View on Amazon</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ann Patchett -->
+                    <div class="author-card">
+                        <div class="author-photo-wrapper">
+                            <img src="ann%20picture.webp" alt="Ann Patchett" class="author-photo">
+                        </div>
+                        <div class="author-info">
+                            <h3 class="author-name">Ann Patchett</h3>
+                            <p class="author-desc">Ann brings profound emotional intelligence to her literary fiction. Her elegant prose and richly developed characters offer insightful commentary on love, family, and the human condition.</p>
+                            <div class="author-book-section">
+                                <a href="https://www.amazon.com/s?k=Ann+Patchett+books" class="author-book-link" target="_blank" rel="noopener noreferrer">
+                                    <img src="ann%20book.jpg" alt="Book by Ann Patchett" class="author-book-cover">
+                                    <span class="amazon-btn">View on Amazon</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kate Cullen -->
+                    <div class="author-card">
+                        <div class="author-photo-wrapper">
+                            <img src="Kate%20Cullen.webp" alt="Kate Cullen" class="author-photo">
+                        </div>
+                        <div class="author-info">
+                            <h3 class="author-name">Kate Cullen</h3>
+                            <p class="author-desc">Kate specializes in evocative historical narratives, blending rigorous research with deeply personal character journeys. Her work transports readers to vividly realized settings across time.</p>
+                            <div class="author-book-section">
+                                <a href="https://www.amazon.com/s?k=Kate+Cullen+books" class="author-book-link" target="_blank" rel="noopener noreferrer">
+                                    <img src="Kate%20Cullen%20book.jpg" alt="Book by Kate Cullen" class="author-book-cover">
+                                    <span class="amazon-btn">View on Amazon</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ottessa Moshfegh -->
+                    <div class="author-card">
+                        <div class="author-photo-wrapper">
+                            <img src="Ottessa%20Moshfegh%20pic.webp" alt="Ottessa Moshfegh" class="author-photo">
+                        </div>
+                        <div class="author-info">
+                            <h3 class="author-name">Ottessa Moshfegh</h3>
+                            <p class="author-desc">Ottessa delivers bold, uncompromising contemporary fiction. Her distinct voice and willingness to explore the unconventional edges of society make her work distinctly memorable and impactful.</p>
+                            <div class="author-book-section">
+                                <a href="https://www.amazon.com/s?k=Ottessa+Moshfegh+books" class="author-book-link" target="_blank" rel="noopener noreferrer">
+                                    <img src="Ottessa%20Moshfegh%20book.jpg" alt="Book by Ottessa Moshfegh" class="author-book-cover">
+                                    <span class="amazon-btn">View on Amazon</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="bg-navy section-padding">
+                <div class="container">
+                    <div class="text-center mb-4">
+                        <h2 style="color:var(--white);">Author Experiences & Work Proofs</h2>
+                        <div class="gold-line"></div>
+                        <p style="color:var(--white);">Authors consistently express their positive experience with QUILL PATHWAY LITERARY. View their direct insights and browse snapshots of our active campaign successes below.</p>
+                    </div>
+                    
+                    <h3 style="color:var(--bright-gold); margin-bottom: 20px; text-align: center; font-size: 1.5rem;">Author Testimonials</h3>
+                    <div class="gallery-grid mb-4">
+                        <div class="gallery-item">
+                            <video controls poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><rect width='100%' height='100%' fill='%23061B42'/><text x='50%' y='50%' fill='%23C17B0A' font-family='Arial' font-size='20' text-anchor='middle'>Video Testimonial 1</text></svg>">
+                                <source src="v1%20(2).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div style="padding: 15px; background: var(--white); color: var(--primary-navy); text-align: center; font-weight: 500;">
+                                Sharing their positive experience with QUILL PATHWAY LITERARY
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <video controls poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><rect width='100%' height='100%' fill='%23061B42'/><text x='50%' y='50%' fill='%23C17B0A' font-family='Arial' font-size='20' text-anchor='middle'>Video Testimonial 2</text></svg>">
+                                <source src="v1%20(3).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div style="padding: 15px; background: var(--white); color: var(--primary-navy); text-align: center; font-weight: 500;">
+                                Sharing their positive experience with QUILL PATHWAY LITERARY
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 style="color:var(--bright-gold); margin-top: 50px; margin-bottom: 20px; text-align: center; font-size: 1.5rem;">Campaign Work Proofs</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" onclick="openLightbox('1.jpeg')">
+                            <img src="1.jpeg" alt="Campaign Proof 1">
+                            <div class="overlay">Click to View Proof</div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('2.jpeg')">
+                            <img src="2.jpeg" alt="Campaign Proof 2">
+                            <div class="overlay">Click to View Proof</div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('3.jpeg')">
+                            <img src="3.jpeg" alt="Campaign Proof 3">
+                            <div class="overlay">Click to View Proof</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- RESOURCES PAGE -->
+        <section id="resources" class="page-section">
+            <div class="page-banner">
+                <div class="container">
+                    <h1>Literary Resources</h1>
+                    <p>Insights and tools for the professional author.</p>
+                </div>
+            </div>
+            <div class="container section-padding pt-0">
+                <div class="grid-3">
+                    <div class="service-card">
+                        <h3>Marketing Glossary</h3>
+                        <p>Understand the terminology of book promotion, from ACoS to Metadata. Clear definitions to help you navigate industry conversations with confidence.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Launch Checklists</h3>
+                        <p>Comprehensive timelines detailing what needs to happen 90, 60, and 30 days before your book release to ensure maximum impact.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Platform Building Guide</h3>
+                        <p>Best practices for establishing a professional digital presence, optimizing your website, and maintaining an engaged newsletter list.</p>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top:50px;">
+                    <p><em>Access to our full resource library is provided exclusively to our active clients.</em></p>
+                    <a href="#contact" class="btn btn-gold" style="margin-top:20px;">Become a Client</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ PAGE -->
+        <section id="faq" class="page-section">
+            <div class="page-banner">
+                <div class="container">
+                    <h1>Frequently Asked Questions</h1>
+                    <p>Clarity on our processes and partnerships.</p>
+                </div>
+            </div>
+            <div class="container section-padding pt-0" style="max-width:800px;">
+                
+                <div style="background:var(--white); padding:30px; border-radius:8px; margin-bottom:20px; box-shadow:0 4px 10px rgba(0,0,0,0.05); border-left:4px solid var(--primary-gold);">
+                    <h3 style="margin-bottom:10px; font-size:1.2rem;">What genres does QUILL PATHWAY LITERARY work with?</h3>
+                    <p style="color:#555;">We partner with authors across a wide spectrum of genres, including literary fiction, thrillers, historical fiction, romance, and narrative nonfiction. Our strategies are adaptable to where your specific readership resides.</p>
+                </div>
+
+                <div style="background:var(--white); padding:30px; border-radius:8px; margin-bottom:20px; box-shadow:0 4px 10px rgba(0,0,0,0.05); border-left:4px solid var(--primary-gold);">
+                    <h3 style="margin-bottom:10px; font-size:1.2rem;">Do you guarantee book sales or bestseller status?</h3>
+                    <p style="color:#555;">No professional agency can guarantee specific sales figures or bestseller placements. We guarantee the implementation of rigorous, data-driven marketing strategies designed to maximize your book's visibility and conversion potential in the marketplace.</p>
+                </div>
+
+                <div style="background:var(--white); padding:30px; border-radius:8px; margin-bottom:20px; box-shadow:0 4px 10px rgba(0,0,0,0.05); border-left:4px solid var(--primary-gold);">
+                    <h3 style="margin-bottom:10px; font-size:1.2rem;">How long do marketing campaigns typically run?</h3>
+                    <p style="color:#555;">Campaign durations vary based on author goals. A standard launch campaign typically spans 3 to 6 months, encompassing pre-launch buildup, launch week intensity, and post-launch sustainment.</p>
+                </div>
+
+                <div style="background:var(--white); padding:30px; border-radius:8px; margin-bottom:20px; box-shadow:0 4px 10px rgba(0,0,0,0.05); border-left:4px solid var(--primary-gold);">
+                    <h3 style="margin-bottom:10px; font-size:1.2rem;">Do I retain the rights to my work?</h3>
+                    <p style="color:#555;">Absolutely. QUILL PATHWAY LITERARY provides marketing and strategic services. You retain 100% of your intellectual property and publishing rights at all times.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT PAGE -->
+        <section id="contact" class="page-section">
+            <div class="page-banner">
+                <div class="container">
+                    <h1>Connect With Us</h1>
+                    <p>Begin your strategic pathway today.</p>
+                </div>
+            </div>
+            <div class="container section-padding pt-0">
+                <div class="contact-container">
+                    <div class="contact-info-block">
+                        <h3>Contact Information</h3>
+                        <p style="margin-bottom:30px; color:rgba(255,255,255,0.8);">Reach out to our team to discuss your literary goals and how our strategies can align with your vision.</p>
+                        
+                        <div class="contact-info-item">
+                            <div style="color:var(--bright-gold); font-size:1.5rem;">✉</div>
+                            <div>
+                                <h4 style="color:var(--white); margin-bottom:5px; font-family:'Inter', sans-serif;">Email Us</h4>
+                                <a href="mailto:hello@quillpathwayliterary.com">hello@quillpathwayliterary.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div style="color:var(--bright-gold); font-size:1.5rem;">🌐</div>
+                            <div>
+                                <h4 style="color:var(--white); margin-bottom:5px; font-family:'Inter', sans-serif;">Online Consultation</h4>
+                                <p style="color:var(--white);">Available globally via digital meetings.</p>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top:50px;">
+                            <img src="yhhh.png" alt="QUILL PATHWAY LITERARY" style="max-width:150px; background:var(--white); padding:10px; border-radius:4px;">
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-block">
+                        <h2 style="margin-bottom:20px;">Request a Consultation</h2>
+                        <p style="margin-bottom:30px; color:#666;">Please fill out the form below detailing your current project, and a member of our strategic team will be in touch shortly.</p>
+                        
+                        <form id="contactForm" action="https://formspree.io/f/xvkaoqpe" method="POST">
+                            <input type="text" name="_gotcha" style="display:none" />
+                            <div class="grid-2" style="gap:20px;">
+                                <div class="form-group">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" name="name" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" name="email" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Book Title / Genre</label>
+                                <input type="text" name="book_details" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">How can we assist you?</label>
+                                <textarea name="message" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-gold" id="submitBtn">
+                                Submit Request <span class="loading-spinner" id="submitSpinner"></span>
+                            </button>
+                            <div id="formMessage" class="form-message"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REFUND POLICY PAGE -->
+        <section id="refund" class="page-section">
+            <div class="page-banner">
+                <div class="container">
+                    <h1>Refund Policy</h1>
+                    <p>Transparency and commitment to our authors.</p>
+                </div>
+            </div>
+            <div class="container section-padding pt-0">
+                <div class="legal-content">
+                    <h2>Overview</h2>
+                    <p>At QUILL PATHWAY LITERARY, we are deeply committed to delivering high-quality author marketing and strategic services. Because our work involves extensive dedicated labor, bespoke strategy development, and immediate allocation of resources, our refund policies are structured to reflect the nature of professional service delivery.</p>
+                    
+                    <h2>Eligibility for Refunds</h2>
+                    <p>Refunds are assessed on a per-contract basis. Generally, once a strategic campaign has commenced and digital architecture or outreach has been initiated, fees are non-refundable. If a cancellation request is submitted prior to the commencement of active work, a partial refund may be issued, minus an administrative and onboarding fee.</p>
+                    
+                    <h2>Monthly Retainers</h2>
+                    <p>For ongoing marketing retainers, clients may cancel their services with a 30-day written notice. Services will continue through the end of the paid billing cycle, and no prorated refunds will be issued for mid-cycle cancellations.</p>
+                    
+                    <h2>How to Request a Review</h2>
+                    <p>If you believe there has been a significant failure to deliver the agreed-upon services as outlined in your specific contract, please submit a detailed review request to our management team. We pride ourselves on ethical business practices and will conduct a thorough review of the campaign deliverables.</p>
+                    
+                    <h2>Our Commitment</h2>
+                    <p>While we cannot guarantee specific sales metrics, we absolutely guarantee the diligent execution of the marketing strategies we have outlined for your project.</p>
+                    
+                    <h2>Contact for Policy Questions</h2>
+                    <p>For any questions regarding billing, contracts, or this policy, please contact us directly at <a href="mailto:hello@quillpathwayliterary.com" class="gold-text">hello@quillpathwayliterary.com</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TERMS & CONDITIONS PAGE -->
+        <section id="terms" class="page-section">
+            <div class="page-banner">
+                <div class="container">
+                    <h1>Terms & Conditions</h1>
+                    <p>The legal framework of our professional partnership.</p>
+                </div>
+            </div>
+            <div class="container section-padding pt-0">
+                <div class="legal-content">
+                    <h2>01. Introduction</h2>
+                    <p>Welcome to QUILL PATHWAY LITERARY. By accessing our website or engaging our services, you agree to be bound by these Terms and Conditions. Please read them carefully.</p>
+
+                    <h2>02. Professional Services</h2>
+                    <p>QUILL PATHWAY LITERARY provides consulting, marketing, and strategic publishing services for authors. The specific scope of work for any client will be detailed in a separate, written service agreement or statement of work.</p>
+
+                    <h2>03. Intellectual Property Rights</h2>
+                    <p>Clients retain all copyright and intellectual property rights to their manuscripts, books, and original content. QUILL PATHWAY LITERARY claims no ownership over your literary works.</p>
+
+                    <h2>04. Client Responsibilities</h2>
+                    <p>The client agrees to provide timely access to necessary materials, including manuscripts, brand assets, and approvals, to ensure the successful execution of marketing campaigns.</p>
+
+                    <h2>05. No Guarantee of Sales</h2>
+                    <p>While we apply rigorous industry standards and strategic marketing methodologies, QUILL PATHWAY LITERARY does not and cannot guarantee specific sales figures, bestseller status, or financial returns. The literary market is subjective and unpredictable.</p>
+
+                    <h2>06. Payment Terms</h2>
+                    <p>Payment structures, including deposits, retainers, and milestone payments, are governed by your individual service agreement. Services will not commence until initial payments are secured.</p>
+
+                    <h2>07. Confidentiality</h2>
+                    <p>We treat all unpublished manuscripts and proprietary author business strategies with strict confidentiality. Mutual non-disclosure agreements can be executed upon request prior to strategic reviews.</p>
+
+                    <h2>08. Website Usage</h2>
+                    <p>The content, design, and structure of this website are the property of QUILL PATHWAY LITERARY. Unauthorized reproduction or use of our branding, text, or structure is strictly prohibited.</p>
+
+                    <h2>09. Third-Party Platforms</h2>
+                    <p>Our strategies often involve third-party platforms (e.g., Amazon, Meta, Google). We are not liable for changes in their terms of service, algorithm updates, or account suspensions that are beyond our control.</p>
+
+                    <h2>10. Limitation of Liability</h2>
+                    <p>In no event shall QUILL PATHWAY LITERARY be liable for any indirect, incidental, or consequential damages arising out of the use of our services or website.</p>
+
+                    <h2>11. Termination of Services</h2>
+                    <p>Either party may terminate the business relationship according to the notice period specified in the individual service agreement. Upon termination, the client will be billed for all work completed up to that date.</p>
+
+                    <h2>12. Dispute Resolution</h2>
+                    <p>Any disputes arising from these terms shall be resolved through good-faith negotiation. If negotiation fails, disputes will be subject to professional mediation before any formal legal proceedings.</p>
+
+                    <h2>13. Modifications to Terms</h2>
+                    <p>We reserve the right to update these terms at any time. Continued use of our website or services following any changes constitutes acceptance of those changes.</p>
+
+                    <h2>14. Contact Information</h2>
+                    <p>For legal inquiries or questions regarding these terms, please contact our administrative team at <a href="mailto:hello@quillpathwayliterary.com" class="gold-text">hello@quillpathwayliterary.com</a>.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#home" class="footer-logo">
+                        <img src="yhhh.png" alt="QUILL PATHWAY LITERARY Footer Logo">
+                    </a>
+                    <p class="footer-about">A Strategic Pathway from Books to Readers. We provide comprehensive author marketing and literary strategies to elevate your visibility in a crowded marketplace.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="mailto:hello@quillpathwayliterary.com" style="color:var(--bright-gold); text-decoration:none; display:flex; align-items:center; gap:10px; margin-bottom: 15px;">
+                            <span style="font-size:1.2rem;">✉</span> hello@quillpathwayliterary.com
+                        </a>
+                        <div style="display: flex; gap: 15px;">
+                            <a href="https://www.facebook.com/profile.php?id=100086261552549" target="_blank" rel="noopener noreferrer" style="color:var(--bright-gold); text-decoration:none; font-weight: 500; border: 1px solid var(--bright-gold); padding: 4px 10px; border-radius: 4px; font-size: 0.85rem;">Facebook</a>
+                            <a href="https://www.tiktok.com/@quillpathway_literary" target="_blank" rel="noopener noreferrer" style="color:var(--bright-gold); text-decoration:none; font-weight: 500; border: 1px solid var(--bright-gold); padding: 4px 10px; border-radius: 4px; font-size: 0.85rem;">TikTok</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#authors">Featured Authors</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Expertise</h4>
+                    <ul class="footer-links">
+                        <li><a href="#reader-discovery">Reader Discovery</a></li>
+                        <li><a href="#publishing">Strategic Publishing</a></li>
+                        <li><a href="#how-we-work">How We Work</a></li>
+                        <li><a href="#resources">Author Resources</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#contact">Request Consultation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; <span id="year"></span> QUILL PATHWAY LITERARY. All rights reserved.</div>
+                <div class="legal-links">
+                    <a href="#refund">Refund Policy</a>
+                    <a href="#terms">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Campaign Proof">
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Set dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-item, .nav-links .btn');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close mobile menu when a link is clicked
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileToggle.textContent = '☰';
+            });
+        });
+
+        // Hash Routing System
+        function handleRoute() {
+            let hash = window.location.hash || '#home';
+            
+            // Hide all sections
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show target section
+            const targetSection = document.querySelector(hash);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                window.scrollTo(0, 0);
+            } else {
+                // Fallback to home if hash is invalid
+                document.querySelector('#home').classList.add('active');
+            }
+
+            // Update active state in navigation
+            document.querySelectorAll('.nav-item').forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === hash) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('hashchange', handleRoute);
+        window.addEventListener('load', handleRoute);
+
+        // Header Scroll Effect & Back to Top Button
+        const header = document.querySelector('header');
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 15px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+            }
+
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Lightbox Functionality
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = src;
+            lightbox.classList.add('show');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('show');
+        }
+
+        // Close lightbox when clicking outside the image
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target !== document.getElementById('lightbox-img')) {
+                closeLightbox();
+            }
+        });
+
+        // Contact Form AJAX Submission
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const submitSpinner = document.getElementById('submitSpinner');
+        const formMessage = document.getElementById('formMessage');
+
+        if(contactForm) {
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Show loading state
+                submitBtn.disabled = true;
+                submitSpinner.style.display = 'inline-block';
+                formMessage.className = 'form-message';
+                formMessage.style.display = 'none';
+
+                const formData = new FormData(contactForm);
+
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });   
+
+                    if (response.ok) {
+                        formMessage.textContent = "Thank you! Your consultation request has been received. Our team will contact you shortly.";
+                        formMessage.className = 'form-message success';
+                        contactForm.reset();
+                    } else {
+                        formMessage.textContent = "Oops! There was a problem submitting your form. Please try again or email us directly.";
+                        formMessage.className = 'form-message error';
+                    }
+                } catch (error) {
+                    formMessage.textContent = "Oops! There was a problem connecting to the server. Please try again or email us directly.";
+                    formMessage.className = 'form-message error';
+                } finally {
+                    formMessage.style.display = 'block';
+                    submitBtn.disabled = false;
+                    submitSpinner.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+```
